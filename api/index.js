@@ -24,21 +24,7 @@ app.use(express.static(path.resolve(__dirname, '..')));
 
 // Middleware
 app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://www.youtube.com", "https://s.ytimg.com"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      styleSrcElem: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      imgSrc: ["'self'", "data:", "blob:", "https:", "https://i.ytimg.com", "https://img.youtube.com"],
-      mediaSrc: ["'self'", "blob:", "https:"],
-      connectSrc: ["'self'", "https:", "blob:", "https://www.googleapis.com", "https://www.youtube.com"],
-      fontSrc: ["'self'", "data:", "https://fonts.gstatic.com"],
-      objectSrc: ["'none'"],
-      frameSrc: ["'self'", "https://www.youtube.com", "https://open.spotify.com"],
-      workerSrc: ["'self'", "blob:"],
-      childSrc: ["'self'", "blob:"]
-  }
+  contentSecurityPolicy: false // Disable CSP for simplicity in Vercel
 }));
 
 app.use(cors({
@@ -296,3 +282,13 @@ app.get('*', (req, res) => {
 
 // Export for Vercel
 module.exports = app;
+
+// Start server for local development only
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log('🎵 VibeCraft API Server running on http://localhost:' + PORT);
+    console.log('📱 Main App: http://localhost:' + PORT);
+    console.log('🔗 API endpoints: http://localhost:' + PORT + '/api/*');
+  });
+}

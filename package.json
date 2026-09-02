@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node api/index.js",
     "dev": "node api/index.js",
-    "vercel-build": "echo 'No build step needed'"
+    "vercel-build": "echo 'No build step needed'",
+    "local": "node api/index.js"
   },
   "keywords": [
     "music",
