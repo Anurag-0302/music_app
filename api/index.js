@@ -19,52 +19,13 @@ const SESSION_SECRET = process.env.SESSION_SECRET;
 let importedTracks = [];
 let sharedPages = {};
 
-// MIME type map for proper file serving
-const mimeTypes = {
-  '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'application/javascript',
-  '.json': 'application/json',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon',
-  '.woff': 'font/woff',
-  '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf',
-  '.eot': 'application/vnd.ms-fontobject'
-};
-
-// Function to get MIME type
-function getMimeType(filePath) {
-  const ext = path.extname(filePath).toLowerCase();
-  return mimeTypes[ext] || 'application/octet-stream';
-}
-
-// Manual static file serving with proper MIME types
-app.use((req, res, next) => {
-  const filePath = path.resolve(__dirname, '..', req.path);
-  
-  // Check if it's a static file
-  const fs = require('fs');
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-    const mimeType = getMimeType(filePath);
-    res.setHeader('Content-Type', mimeType);
-    return res.sendFile(filePath);
-  }
-  
-  next();
-});
-
 // Middleware
 app.use(helmet({
   contentSecurityPolicy: false // Disable CSP for simplicity in Vercel
 }));
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://vibecraft-theta.vercel.app', 'https://vibecraft-stackup4.vercel.app', 'https://music-app-stackup4.vercel.app'],
+  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://vibecraft-theta.vercel.app', 'https://vibecraft-stackup4.vercel.app', 'https://music-app-stackup4.vercel.app', 'https://vibecraft-8sc53e0uv-stackup4.vercel.app'],
   credentials: true
 }));
 
@@ -79,7 +40,8 @@ app.use((req, res, next) => {
     'http://127.0.0.1:3000',
     'https://vibecraft-theta.vercel.app',
     'https://vibecraft-stackup4.vercel.app',
-    'https://music-app-stackup4.vercel.app'
+    'https://music-app-stackup4.vercel.app',
+    'https://vibecraft-8sc53e0uv-stackup4.vercel.app'
   ];
 
   if (origin && origin.startsWith('chrome-extension://')) {
@@ -311,8 +273,14 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Fallback for SPA routing
+// Fallback for SPA routing - only for API routes and non-static files
 app.get('*', (req, res) => {
+  // Check if this is an API route
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).json({ error: 'API endpoint not found' });
+  }
+  
+  // For non-API routes, serve index.html
   const indexPath = path.resolve(__dirname, '..', 'index.html');
   res.setHeader('Content-Type', 'text/html');
   res.sendFile(indexPath);
