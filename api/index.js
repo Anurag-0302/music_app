@@ -19,8 +19,44 @@ const SESSION_SECRET = process.env.SESSION_SECRET;
 let importedTracks = [];
 let sharedPages = {};
 
-// Serve static files from root directory
-app.use(express.static(path.resolve(__dirname, '..')));
+// MIME type map for proper file serving
+const mimeTypes = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'application/javascript',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.eot': 'application/vnd.ms-fontobject'
+};
+
+// Function to get MIME type
+function getMimeType(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  return mimeTypes[ext] || 'application/octet-stream';
+}
+
+// Manual static file serving with proper MIME types
+app.use((req, res, next) => {
+  const filePath = path.resolve(__dirname, '..', req.path);
+  
+  // Check if it's a static file
+  const fs = require('fs');
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+    const mimeType = getMimeType(filePath);
+    res.setHeader('Content-Type', mimeType);
+    return res.sendFile(filePath);
+  }
+  
+  next();
+});
 
 // Middleware
 app.use(helmet({
@@ -277,7 +313,9 @@ app.get('/api/health', (_req, res) => {
 
 // Fallback for SPA routing
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+  const indexPath = path.resolve(__dirname, '..', 'index.html');
+  res.setHeader('Content-Type', 'text/html');
+  res.sendFile(indexPath);
 });
 
 // Export for Vercel
