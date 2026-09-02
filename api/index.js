@@ -20,7 +20,7 @@ let importedTracks = [];
 let sharedPages = {};
 
 // Serve static files from root directory
-app.use(express.static(__dirname + '/..'));
+app.use(express.static(path.resolve(__dirname, '..')));
 
 // Middleware
 app.use(helmet({
@@ -42,7 +42,7 @@ app.use(helmet({
 }));
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://vibecraft-theta.vercel.app', 'https://vibecraft-stackup4.vercel.app'],
+  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://vibecraft-theta.vercel.app', 'https://vibecraft-stackup4.vercel.app', 'https://music-app-stackup4.vercel.app'],
   credentials: true
 }));
 
@@ -56,7 +56,8 @@ app.use((req, res, next) => {
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'https://vibecraft-theta.vercel.app',
-    'https://vibecraft-stackup4.vercel.app'
+    'https://vibecraft-stackup4.vercel.app',
+    'https://music-app-stackup4.vercel.app'
   ];
 
   if (origin && origin.startsWith('chrome-extension://')) {
@@ -283,9 +284,6 @@ app.delete('/api/pages/:pageId', (req, res) => {
   }
 });
 
-// Serve static files from root directory
-app.use(express.static(path.join(__dirname, '..')));
-
 // Health check
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
@@ -293,7 +291,7 @@ app.get('/api/health', (_req, res) => {
 
 // Fallback for SPA routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '..', 'index.html'));
 });
 
 // Export for Vercel
