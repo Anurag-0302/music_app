@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "VibeCraft Spotify Import",
+  "version": "1.2.0",
+  "description": "Import Spotify playlists to VibeCraft without using Spotify API",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://open.spotify.com/*",
+    "http://localhost:3000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

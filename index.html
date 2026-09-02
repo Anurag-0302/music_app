@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCraft — Your Music. Your Voice. Your Space.</title>
+    <meta name="description" content="Create your personal music page. Add YouTube songs, upload audio, or record voice notes. Customize your space and share it with the world.">
+    <meta property="og:title" content="VibeCraft — Your Music. Your Voice. Your Space.">
+    <meta property="og:description" content="Create your personal music page with songs, recordings, and vibes.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="grain">
+
+<!-- ========== LANDING PAGE ========== -->
+<div id="landing-page">
+    <div class="hero-gradient" aria-hidden="true"></div>
+
+    <header class="landing-header">
+        <a href="/" class="logo-text font-display">🎵 VibeCraft</a>
+        <nav class="landing-nav">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#showcase" class="nav-link">Showcase</a>
+            <button id="start-creating-nav" class="btn-primary btn-sm">Start Creating</button>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <p class="hero-badge animate-fade-up">Your corner of the internet</p>
+        <h1 class="hero-title font-display animate-fade-up" style="animation-delay: 60ms">
+            Your Music. Your Voice.<br>Your Space.
+        </h1>
+        <p class="hero-subtitle animate-fade-up" style="animation-delay: 120ms">
+            Drop in songs from YouTube, upload your tracks, or record voice notes right in your browser.
+            Drag things where you like. Make it yours.
+        </p>
+        <div class="hero-actions animate-fade-up" style="animation-delay: 180ms">
+            <button id="start-creating-hero" class="btn-primary">
+                Start Creating
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+            <span class="hero-note">No sign-up needed</span>
+        </div>
+    </main>
+
+    <section id="features" class="features-section">
+        <div class="feature-card animate-fade-up">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><path d="m9 9 12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3 class="feature-title font-display">Any Song on YouTube</h3>
+            <p class="feature-desc">Paste a link and it's in. Build your perfect playlist that plays through and loops.</p>
+        </div>
+        <div class="feature-card animate-fade-up" style="animation-delay: 80ms">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+            </div>
+            <h3 class="feature-title font-display">Record Your Voice</h3>
+            <p class="feature-desc">Record voice notes, songs, or ideas right from your browser. See the waveform live as you record.</p>
+        </div>
+        <div class="feature-card animate-fade-up" style="animation-delay: 160ms">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+            </div>
+            <h3 class="feature-title font-display">Upload Your Tracks</h3>
+            <p class="feature-desc">Got MP3s, WAVs, or voice memos on your phone? Drop them in and they're part of your page.</p>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase-section">
+        <h2 class="showcase-heading font-display animate-fade-up">See What Others Created</h2>
+        <div class="showcase-grid">
+            <div class="showcase-tile animate-fade-up">
+                <div class="showcase-tile-inner">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80" alt="Midnight Vibes music page" loading="lazy">
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-info">
+                        <p class="showcase-name">Midnight Vibes</p>
+                        <p class="showcase-count">12 songs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-tile animate-fade-up" style="animation-delay: 60ms">
+                <div class="showcase-tile-inner">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=80" alt="Lo-Fi Corner music page" loading="lazy">
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-info">
+                        <p class="showcase-name">Lo-Fi Corner</p>
+                        <p class="showcase-count">8 songs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-tile animate-fade-up" style="animation-delay: 120ms">
+                <div class="showcase-tile-inner">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&q=80" alt="Voice Diary music page" loading="lazy">
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-info">
+                        <p class="showcase-name">Voice Diary</p>
+                        <p class="showcase-count">24 recordings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-tile animate-fade-up" style="animation-delay: 180ms">
+                <div class="showcase-tile-inner">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=80" alt="Acoustic Session music page" loading="lazy">
+                    <div class="showcase-overlay"></div>
+                    <div class="showcase-info">
+                        <p class="showcase-name">Acoustic Session</p>
+                        <p class="showcase-count">6 songs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="landing-footer">
+        <p>Made with ♥ — Your music, your space, your rules.</p>
+    </footer>
+</div>
+
+<!-- ========== EDITOR PAGE ========== -->
+<div id="editor-page" class="editor-page">
+    <div id="editor-canvas" class="editor-canvas" style="background-image: url('https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=1920&q=80')">
+
+        <!-- Toolbar -->
+        <div class="editor-toolbar">
+            <div class="toolbar-left">
+                <button id="back-btn" class="toolbar-btn back-btn" title="Back to home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    Back
+                </button>
+            </div>
+            <div class="toolbar-center">
+                <span class="toolbar-title font-display">🎵 VibeCraft</span>
+            </div>
+            <div class="toolbar-right">
+                <button id="share-btn" class="toolbar-btn" title="Create shareable link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    Share
+                </button>
+                <button id="bg-panel-toggle" class="toolbar-btn" title="Change background">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    Background
+                </button>
+                <button id="songs-panel-toggle" class="toolbar-btn" title="Manage songs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    Songs
+                </button>
+            </div>
+        </div>
+
+        <!-- Draggable Widgets -->
+        <div id="widget-title" class="widget widget-text" style="left: 50%; top: 35%; transform: translate(-50%, -50%)">
+            <h2 contenteditable="true" spellcheck="false">My Music Space</h2>
+        </div>
+
+        <div id="widget-clock" class="widget widget-clock" style="left: 50%; top: 50%; transform: translate(-50%, -50%)">
+            <span id="clock-display">00:00</span>
+        </div>
+
+        <div id="widget-links" class="widget widget-links" style="left: 50%; top: 62%; transform: translate(-50%, -50%)">
+            <a href="#" class="widget-link" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="widget-link" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="widget-link" title="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+            <a href="#" class="widget-link" title="Spotify">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.622.622 0 11-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.622.622 0 01.207.857zm1.224-2.719a.78.78 0 01-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 01-.973-.519.781.781 0 01.52-.972c3.632-1.102 8.147-.568 11.234 1.328a.78.78 0 01.256 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.936.936 0 11-.543-1.791c3.532-1.072 9.404-.865 13.115 1.338a.936.936 0 01-.954 1.613z"/></svg>
+            </a>
+        </div>
+
+        <!-- YouTube Player Container (hidden off-screen) -->
+        <div id="youtube-player-container" style="position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;">
+            <div id="yt-player"></div>
+        </div>
+
+        <!-- Spotify Embed Container (hidden off-screen) -->
+        <div id="spotify-player-container" style="position:absolute;top:-9999px;left:-9999px;width:300px;height:80px;overflow:hidden;">
+            <div id="spotify-embed"></div>
+        </div>
+    </div>
+
+    <!-- Panel backdrop (click to close) -->
+    <div id="panel-overlay" class="panel-overlay" aria-hidden="true"></div>
+
+    <!-- Background Panel -->
+    <div id="bg-panel" class="side-panel">
+        <div class="panel-header">
+            <h3 class="panel-title">Background</h3>
+            <button class="panel-close" data-panel="bg-panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="panel-body">
+            <div class="bg-grid" id="bg-grid">
+                <!-- Background options inserted by JS -->
+            </div>
+            <div style="margin-top: 1rem">
+                <label class="bg-upload-btn" id="bg-upload-label">
+                    <input type="file" id="bg-upload-input" accept="image/*" hidden>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                    <span>Upload your own</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Songs Panel -->
+    <div id="songs-panel" class="side-panel songs-panel">
+        <div class="panel-header">
+            <div class="panel-header-info">
+                <div class="panel-header-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <div>
+                    <h3 class="panel-title">Your Playlist</h3>
+                    <p class="panel-subtitle">Tap a track to play</p>
+                </div>
+            </div>
+            <button class="panel-close" data-panel="songs-panel" aria-label="Close playlist">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="panel-body">
+            <!-- Playlist -->
+            <div class="playlist-card">
+                <div class="playlist-card-header">
+                    <div class="playlist-card-title">
+                        <span class="section-label">Queue</span>
+                        <span id="track-count" class="track-count-badge">0 tracks</span>
+                    </div>
+                    <button id="playlist-collapse-btn" class="playlist-icon-btn" type="button" title="Collapse playlist" aria-expanded="true" aria-controls="playlist-card-body">
+                        <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    </button>
+                </div>
+                <div id="playlist-card-body" class="playlist-card-body">
+                    <div id="track-list" class="track-list">
+                        <div id="empty-playlist" class="empty-playlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                            <p>No tracks yet</p>
+                            <p class="empty-hint">Add songs below to build your playlist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-music-heading">
+                <span class="section-label">Add Music</span>
+            </div>
+
+            <!-- YouTube URL Input -->
+            <div class="add-song-section">
+                <label class="section-label">Add from YouTube</label>
+                <div class="input-group">
+                    <input type="text" id="youtube-url-input" class="text-input" placeholder="Paste YouTube video or playlist URL...">
+                    <button id="add-youtube-btn" class="add-btn">Add</button>
+                </div>
+            </div>
+
+            <!-- Import from Spotify -->
+            <div class="add-song-section">
+                <label class="section-label">Import from Spotify</label>
+                
+                <!-- Browser Import Option (Primary - Works) -->
+                <div class="import-option browser-import primary">
+                    <div class="import-option-header">
+                        <span class="import-option-title">� Browser Extension (Recommended)</span>
+                        <span class="import-option-badge success">Working</span>
+                    </div>
+                    <p class="import-option-desc">
+                        Open your Spotify playlist and use the VibeCraft browser helper for automatic import. This method works reliably.
+                    </p>
+                    <button id="install-extension-btn" class="extension-btn primary-btn">Install Browser Helper</button>
+                </div>
+                
+                <div class="import-divider">OR</div>
+                
+                <!-- Manual Paste Option (Fallback - Works) -->
+                <div class="import-option manual-import">
+                    <div class="import-option-header">
+                        <span class="import-option-title">� Manual Paste (Fallback)</span>
+                        <span class="import-option-badge">Works</span>
+                    </div>
+                    <p class="import-option-desc">
+                        Copy songs from Spotify and paste them below. Works if extension can't be installed.
+                    </p>
+                    <textarea id="song-list-textarea" class="song-list-textarea" placeholder="Paste your song list here...
+
+Example formats:
+Tum Hi Ho - Arijit Singh
+Apna Bana Le - Arijit Singh
+
+Or:
+Tum Hi Ho
+Arijit Singh"></textarea>
+                    <button id="import-song-list-btn" class="add-btn">Import Songs</button>
+                </div>
+                
+                <!-- URL Import (Hidden - Not Working) -->
+                <div class="import-option url-import hidden">
+                    <div class="import-option-header">
+                        <span class="import-option-title">� Paste Spotify playlist URL</span>
+                        <span class="import-option-badge">Unavailable</span>
+                    </div>
+                    <p class="import-option-desc">
+                        Currently unavailable due to Spotify page structure changes. Use browser extension instead.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Upload Audio / Video Files -->
+            <div class="add-song-section">
+                <label class="section-label">Upload Audio / Video</label>
+                <div class="upload-zone" id="audio-upload-zone">
+                    <input type="file" id="audio-upload-input" accept="audio/*,video/mp4,video/webm,.mp4,.mkv,.webm" multiple hidden>
+                    <svg class="upload-zone-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                    <p class="upload-zone-text">Click or drag files here</p>
+                    <p class="upload-zone-hint">MP3, WAV, OGG, M4A, WEBM, MP4</p>
+                </div>
+            </div>
+
+            <!-- Voice Recorder -->
+            <div class="recorder-section">
+                <div class="recorder-header">
+                    <span class="recorder-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                        Voice Recorder
+                    </span>
+                    <span id="recorder-dot" class="recorder-dot hidden"></span>
+                </div>
+                <div class="waveform-container">
+                    <canvas id="waveform-canvas"></canvas>
+                </div>
+                <div class="recorder-controls">
+                    <button id="record-btn" class="record-btn" title="Start recording">
+                        <span class="record-dot"></span>
+                    </button>
+                    <span id="recorder-timer" class="recorder-timer">0:00</span>
+                </div>
+                <p id="recorder-status" class="recorder-status">Click the red button to start recording</p>
+
+                <div id="save-recording-form" class="save-recording-form hidden">
+                    <input type="text" id="recording-name-input" class="text-input recording-name-input" placeholder="Name your recording...">
+                    <div class="save-recording-actions">
+                        <button id="save-recording-btn" class="save-recording-btn">Save to Playlist</button>
+                        <button id="discard-recording-btn" class="discard-recording-btn">Discard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button id="songs-panel-close" class="panel-close-btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                Close Playlist
+            </button>
+        </div>
+    </div>
+
+    <!-- Music Player (fixed bottom, editor only) -->
+    <div id="music-player" class="music-player player-hidden">
+        <div class="player-progress" id="player-progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-thumb" id="progress-thumb"></div>
+        </div>
+        <div class="player-content">
+            <div class="now-playing">
+                <div class="now-playing-thumb" id="now-playing-thumb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.3"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <div class="now-playing-info">
+                    <p class="now-playing-title" id="now-playing-title">No track playing</p>
+                    <p class="now-playing-artist" id="now-playing-artist">—</p>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn" id="shuffle-btn" title="Shuffle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></svg>
+                </button>
+                <button class="control-btn" id="prev-btn" title="Previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" x2="5" y1="19" y2="5"/></svg>
+                </button>
+                <button class="control-btn play-pause" id="play-pause-btn" title="Play">
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    <svg id="pause-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </button>
+                <button class="control-btn" id="next-btn" title="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg>
+                </button>
+                <button class="control-btn" id="repeat-btn" title="Repeat">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+                </button>
+            </div>
+
+            <div class="player-right">
+                <div class="player-time">
+                    <span id="current-time">0:00</span>
+                    <span>/</span>
+                    <span id="total-time">0:00</span>
+                </div>
+                <div class="player-volume">
+                    <button class="control-btn volume-btn" id="volume-btn" title="Volume">
+                        <svg id="volume-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                        <svg id="volume-mute-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
+                    </button>
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="80">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden audio element for uploaded/recorded tracks -->
+    <audio id="audio-element" preload="auto"></audio>
+</div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Shareable Link</h2>
+                <button id="modal-close" class="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="form-label">Page Title</label>
+                    <input type="text" id="share-title-input" class="text-input" placeholder="My Music Page" value="">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="form-label">Description</label>
+                    <input type="text" id="share-desc-input" class="text-input" placeholder="A music page created with VibeCraft" value="">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <p class="form-label">Tracks to share: <strong id="share-track-count">0</strong></p>
+                </div>
+                <button id="create-share-btn" class="btn-primary" style="width: 100%; margin-bottom: 1rem;">Create Shareable Link</button>
+                
+                <div id="share-result" style="display: none;">
+                    <div style="background: rgba(217, 119, 6, 0.1); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-muted-foreground);">Your link is ready! Share it with others:</p>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="text" id="share-link-input" readonly class="text-input" style="flex: 1; background: rgba(255,255,255,0.05);">
+                            <button id="copy-link-btn" class="btn-primary" style="padding: 0 1rem;">Copy</button>
+                        </div>
+                        <p style="font-size: 0.8rem; color: rgba(0,0,0,0.5); margin-top: 0.5rem;">🔗 Anyone with this link can listen to your playlist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+<script>
+    // Debug: Check if app.js loaded properly
+    if (typeof setupEventListeners === 'undefined') {
+        console.error('app.js did not load properly - event listeners not available');
+        // Fallback: manually attach event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const startButtons = document.querySelectorAll('[id^="start-creating"]');
+            startButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('Start Creating button clicked (fallback)');
+                    document.getElementById('landing-page').style.display = 'none';
+                    document.getElementById('editor-page').classList.add('active');
+                    document.body.classList.add('editor-open');
+                });
+            });
+        });
+    }
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

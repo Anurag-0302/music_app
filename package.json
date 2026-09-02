@@ -1,0 +1,32 @@
+{
+  "name": "vibecraft",
+  "version": "1.0.0",
+  "description": "Create your personal music page with VibeCraft",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "vercel-build": "echo 'No build step needed'"
+  },
+  "keywords": [
+    "music",
+    "playlist",
+    "audio",
+    "sharing"
+  ],
+  "author": "VibeCraft",
+  "license": "MIT",
+  "dependencies": {
+    "@openrouter/sdk": "^1.2.51",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.6.2",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
