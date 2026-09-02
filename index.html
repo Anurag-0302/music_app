@@ -456,35 +456,6 @@ Arijit Singh"></textarea>
     </div>
 
 <script src="app.js"></script>
-<script>
-    // Enhanced fallback for Start Creating button
-    document.addEventListener('DOMContentLoaded', function() {
-        const startButtons = document.querySelectorAll('[id^="start-creating"]');
-        console.log('Found', startButtons.length, 'Start Creating buttons');
-        
-        startButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('Start Creating button clicked (fallback)');
-                
-                // Get the landing and editor pages
-                const landingPage = document.getElementById('landing-page');
-                const editorPage = document.getElementById('editor-page');
-                
-                if (landingPage && editorPage) {
-                    console.log('Switching from landing to editor');
-                    landingPage.style.display = 'none';
-                    editorPage.classList.add('active');
-                    document.body.classList.add('editor-open');
-                } else {
-                    console.error('Could not find landing-page or editor-page elements');
-                }
-            });
-            
-            console.log('Event listener attached to button:', btn.id);
-        });
-    });
-</script>
 <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
