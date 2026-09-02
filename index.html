@@ -456,6 +456,29 @@ Arijit Singh"></textarea>
     </div>
 
 <script src="app.js"></script>
+<script>
+    // Fallback for Start Creating button if app.js fails to load
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const startButtons = document.querySelectorAll('[id^="start-creating"]');
+            startButtons.forEach(btn => {
+                if (!btn.hasAttribute('data-listener-attached')) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const landingPage = document.getElementById('landing-page');
+                        const editorPage = document.getElementById('editor-page');
+                        if (landingPage && editorPage) {
+                            landingPage.style.display = 'none';
+                            editorPage.classList.add('active');
+                            document.body.classList.add('editor-open');
+                        }
+                    });
+                    btn.setAttribute('data-listener-attached', 'true');
+                }
+            });
+        }, 1000); // Wait 1 second to see if app.js loads first
+    });
+</script>
 <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
